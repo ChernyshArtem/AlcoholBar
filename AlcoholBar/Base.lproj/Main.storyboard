@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlcoholBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGK-So-evQ">
+                                <rect key="frame" x="0.0" y="690" width="393" height="113.33333333333337"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmo-Tz-FQc">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfK-Ca-z4l">
+                                                <rect key="frame" x="16" y="8" width="205" height="40.666666666666664"/>
+                                                <string key="text">Выручка сегодня: 
+0.00р</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmI-M6-qP6">
+                                                <rect key="frame" x="237" y="8" width="140" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="VS1-Rv-cp8"/>
+                                                    <constraint firstAttribute="width" constant="140" id="e6Q-D0-bVo"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Новая смена"/>
+                                                <connections>
+                                                    <action selector="newChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xb8-wm-DTE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="UfK-Ca-z4l" firstAttribute="leading" secondItem="jmo-Tz-FQc" secondAttribute="leading" constant="16" id="9rO-VB-myv"/>
+                                            <constraint firstAttribute="bottom" secondItem="UfK-Ca-z4l" secondAttribute="bottom" constant="8" id="RWQ-UA-7FC"/>
+                                            <constraint firstItem="fmI-M6-qP6" firstAttribute="top" secondItem="jmo-Tz-FQc" secondAttribute="top" constant="8" id="TJl-2h-RvV"/>
+                                            <constraint firstAttribute="trailing" secondItem="fmI-M6-qP6" secondAttribute="trailing" constant="16" id="mTD-NR-hLx"/>
+                                            <constraint firstAttribute="bottom" secondItem="fmI-M6-qP6" secondAttribute="bottom" constant="8" id="oTe-pg-eaV"/>
+                                            <constraint firstItem="UfK-Ca-z4l" firstAttribute="top" secondItem="jmo-Tz-FQc" secondAttribute="top" constant="8" id="pYK-eW-hoz"/>
+                                            <constraint firstItem="fmI-M6-qP6" firstAttribute="leading" secondItem="UfK-Ca-z4l" secondAttribute="trailing" constant="16" id="sK7-kJ-34Z"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-X5-CNE">
+                                        <rect key="frame" x="0.0" y="56.666666666666629" width="393" height="56.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FB-il-Om8">
+                                                <rect key="frame" x="16" y="8" width="205" height="40.666666666666664"/>
+                                                <string key="text">Выручка всего: 
+0.00р</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHl-IV-YKT">
+                                                <rect key="frame" x="237" y="8" width="140" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="0Gq-fs-MEA"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Обнулить"/>
+                                                <connections>
+                                                    <action selector="refreshAlcoholList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="59p-72-KSc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bHl-IV-YKT" firstAttribute="top" secondItem="QuE-X5-CNE" secondAttribute="top" constant="8" id="AFq-xy-B4M"/>
+                                            <constraint firstAttribute="bottom" secondItem="9FB-il-Om8" secondAttribute="bottom" constant="8" id="M6k-hs-XPq"/>
+                                            <constraint firstItem="9FB-il-Om8" firstAttribute="top" secondItem="QuE-X5-CNE" secondAttribute="top" constant="8" id="Oqx-bg-KZP"/>
+                                            <constraint firstAttribute="trailing" secondItem="bHl-IV-YKT" secondAttribute="trailing" constant="16" id="TFj-4o-uj5"/>
+                                            <constraint firstAttribute="bottom" secondItem="bHl-IV-YKT" secondAttribute="bottom" constant="16" id="bG5-pu-6H3"/>
+                                            <constraint firstItem="9FB-il-Om8" firstAttribute="leading" secondItem="QuE-X5-CNE" secondAttribute="leading" constant="16" id="cDB-WV-dUz"/>
+                                            <constraint firstItem="bHl-IV-YKT" firstAttribute="leading" secondItem="9FB-il-Om8" secondAttribute="trailing" constant="16" id="zZT-hy-CPx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jmo-Tz-FQc" firstAttribute="leading" secondItem="xGK-So-evQ" secondAttribute="leading" id="BI5-Ll-Zkv"/>
+                                    <constraint firstItem="QuE-X5-CNE" firstAttribute="leading" secondItem="xGK-So-evQ" secondAttribute="leading" id="Gp9-cU-KDF"/>
+                                    <constraint firstItem="fmI-M6-qP6" firstAttribute="width" secondItem="bHl-IV-YKT" secondAttribute="width" id="OhF-eC-Ib5"/>
+                                    <constraint firstItem="QuE-X5-CNE" firstAttribute="top" secondItem="jmo-Tz-FQc" secondAttribute="bottom" id="SYp-pY-iko"/>
+                                    <constraint firstItem="jmo-Tz-FQc" firstAttribute="height" secondItem="QuE-X5-CNE" secondAttribute="height" id="ZC1-Aa-xTu"/>
+                                    <constraint firstItem="fmI-M6-qP6" firstAttribute="height" secondItem="bHl-IV-YKT" secondAttribute="height" id="bri-iE-UNt"/>
+                                    <constraint firstAttribute="trailing" secondItem="QuE-X5-CNE" secondAttribute="trailing" id="gZv-5H-9CC"/>
+                                    <constraint firstAttribute="trailing" secondItem="jmo-Tz-FQc" secondAttribute="trailing" id="i3w-2M-cZZ"/>
+                                    <constraint firstItem="jmo-Tz-FQc" firstAttribute="top" secondItem="xGK-So-evQ" secondAttribute="top" id="qnY-GN-09i"/>
+                                    <constraint firstAttribute="bottom" secondItem="QuE-X5-CNE" secondAttribute="bottom" id="vs3-By-9Gn"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название бара" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYw-qQ-4GF">
+                                <rect key="frame" x="94.333333333333329" y="75" width="204.33333333333337" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Vh-gP-B3g">
+                                <rect key="frame" x="0.0" y="126.99999999999997" width="393" height="385.33333333333326"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fx-PN-6q2">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="77.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пиво &quot;Алiварыя&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dec-Tb-Dhv">
+                                                <rect key="frame" x="16" y="15.999999999999998" width="149" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWz-yr-4TH">
+                                                <rect key="frame" x="181" y="16.000000000000004" width="196" height="45.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PR1-qN-Q7s">
+                                                        <rect key="frame" x="68" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.5"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ide-rI-MD4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-kX-uRZ">
+                                                        <rect key="frame" x="136" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.9"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rBy-V7-gYP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-Bw-AJY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="I1F-YQ-8Ta"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.25"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ej-hK-hfD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="eRY-Bw-AJY" firstAttribute="width" secondItem="ObX-kX-uRZ" secondAttribute="width" id="0Ku-Gs-scL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="PR1-qN-Q7s" secondAttribute="bottom" id="4wM-Ly-3AL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ObX-kX-uRZ" secondAttribute="bottom" id="5vi-HF-erm"/>
+                                                    <constraint firstItem="PR1-qN-Q7s" firstAttribute="top" secondItem="PWz-yr-4TH" secondAttribute="top" id="79y-IM-ede"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ObX-kX-uRZ" secondAttribute="trailing" id="99M-Vp-MTo"/>
+                                                    <constraint firstItem="eRY-Bw-AJY" firstAttribute="top" secondItem="PWz-yr-4TH" secondAttribute="top" id="Kpt-9q-5I5"/>
+                                                    <constraint firstItem="eRY-Bw-AJY" firstAttribute="leading" secondItem="PWz-yr-4TH" secondAttribute="leading" id="Yta-KR-nLs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="eRY-Bw-AJY" secondAttribute="bottom" id="eld-1H-LsB"/>
+                                                    <constraint firstItem="ObX-kX-uRZ" firstAttribute="leading" secondItem="PR1-qN-Q7s" secondAttribute="trailing" constant="8" id="fUW-8C-ORJ"/>
+                                                    <constraint firstItem="eRY-Bw-AJY" firstAttribute="width" secondItem="PR1-qN-Q7s" secondAttribute="width" id="jWt-kb-iRU"/>
+                                                    <constraint firstItem="PR1-qN-Q7s" firstAttribute="leading" secondItem="eRY-Bw-AJY" secondAttribute="trailing" constant="8" id="nHe-IU-iE2"/>
+                                                    <constraint firstItem="ObX-kX-uRZ" firstAttribute="top" secondItem="PWz-yr-4TH" secondAttribute="top" id="xkL-2n-v26"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остаток: 0.33 л." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-9D-qhr">
+                                                <rect key="frame" x="16" y="44.333333333333343" width="149" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="u6X-9D-qhr" secondAttribute="bottom" constant="16" id="0od-Kk-vTV"/>
+                                            <constraint firstItem="PWz-yr-4TH" firstAttribute="top" secondItem="5Fx-PN-6q2" secondAttribute="top" constant="16" id="4oW-qs-dnz"/>
+                                            <constraint firstItem="PWz-yr-4TH" firstAttribute="leading" secondItem="dec-Tb-Dhv" secondAttribute="trailing" constant="16" id="6h8-aQ-3ja"/>
+                                            <constraint firstItem="u6X-9D-qhr" firstAttribute="top" secondItem="dec-Tb-Dhv" secondAttribute="bottom" constant="8" id="B58-AR-Yz1"/>
+                                            <constraint firstItem="dec-Tb-Dhv" firstAttribute="leading" secondItem="5Fx-PN-6q2" secondAttribute="leading" constant="16" id="H4e-Tl-h8F"/>
+                                            <constraint firstItem="dec-Tb-Dhv" firstAttribute="top" secondItem="5Fx-PN-6q2" secondAttribute="top" constant="16" id="HF4-Xm-xep"/>
+                                            <constraint firstItem="PWz-yr-4TH" firstAttribute="leading" secondItem="u6X-9D-qhr" secondAttribute="trailing" constant="16" id="Pcl-aW-xck"/>
+                                            <constraint firstAttribute="bottom" secondItem="PWz-yr-4TH" secondAttribute="bottom" constant="16" id="R6P-yE-mBs"/>
+                                            <constraint firstAttribute="trailing" secondItem="PWz-yr-4TH" secondAttribute="trailing" constant="16" id="crH-9O-FkJ"/>
+                                            <constraint firstItem="u6X-9D-qhr" firstAttribute="leading" secondItem="5Fx-PN-6q2" secondAttribute="leading" constant="16" id="oGJ-md-YHZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X47-2r-Xfl">
+                                        <rect key="frame" x="0.0" y="77.333333333333343" width="393" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Водка &quot;Столица&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9q-8L-jYt">
+                                                <rect key="frame" x="16" y="15.999999999999998" width="149" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AS9-Xf-kcD">
+                                                <rect key="frame" x="181" y="16" width="196" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-DC-TrM">
+                                                        <rect key="frame" x="68" y="0.0" width="60" height="44"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.5"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="46E-wq-b73"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFh-NO-6xe">
+                                                        <rect key="frame" x="136" y="0.0" width="60" height="44"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.9"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ZV-r1-nMA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozv-SR-pqW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="E7g-Nk-5r6"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.25"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0UY-0q-VYC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Ozv-SR-pqW" secondAttribute="bottom" id="38A-oq-u1X"/>
+                                                    <constraint firstItem="xFh-NO-6xe" firstAttribute="top" secondItem="AS9-Xf-kcD" secondAttribute="top" id="6J4-HP-tRB"/>
+                                                    <constraint firstItem="xFh-NO-6xe" firstAttribute="leading" secondItem="9ly-DC-TrM" secondAttribute="trailing" constant="8" id="CP1-Kc-0tD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xFh-NO-6xe" secondAttribute="bottom" id="D4y-r7-4Ge"/>
+                                                    <constraint firstItem="9ly-DC-TrM" firstAttribute="leading" secondItem="Ozv-SR-pqW" secondAttribute="trailing" constant="8" id="Gga-mq-R9U"/>
+                                                    <constraint firstItem="Ozv-SR-pqW" firstAttribute="leading" secondItem="AS9-Xf-kcD" secondAttribute="leading" id="Qox-lX-IjT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9ly-DC-TrM" secondAttribute="bottom" id="VnL-Bs-kPw"/>
+                                                    <constraint firstItem="9ly-DC-TrM" firstAttribute="top" secondItem="AS9-Xf-kcD" secondAttribute="top" id="WIT-CF-wIB"/>
+                                                    <constraint firstItem="Ozv-SR-pqW" firstAttribute="width" secondItem="xFh-NO-6xe" secondAttribute="width" id="cL9-WP-FQf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xFh-NO-6xe" secondAttribute="trailing" id="jKK-Oz-VbZ"/>
+                                                    <constraint firstItem="Ozv-SR-pqW" firstAttribute="top" secondItem="AS9-Xf-kcD" secondAttribute="top" id="pjX-IP-ceM"/>
+                                                    <constraint firstItem="Ozv-SR-pqW" firstAttribute="width" secondItem="9ly-DC-TrM" secondAttribute="width" id="y8U-sn-4Rk"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остаток: 0.33 л." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oK-9m-SCL">
+                                                <rect key="frame" x="16" y="44.333333333333314" width="149" height="15.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="AS9-Xf-kcD" secondAttribute="trailing" constant="16" id="3oe-DO-TWQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="AS9-Xf-kcD" secondAttribute="bottom" constant="16" id="87K-lH-WCW"/>
+                                            <constraint firstItem="0oK-9m-SCL" firstAttribute="top" secondItem="Y9q-8L-jYt" secondAttribute="bottom" constant="8" id="9CC-hq-pnO"/>
+                                            <constraint firstItem="Y9q-8L-jYt" firstAttribute="top" secondItem="X47-2r-Xfl" secondAttribute="top" constant="16" id="LzT-UC-0oC"/>
+                                            <constraint firstItem="Y9q-8L-jYt" firstAttribute="leading" secondItem="X47-2r-Xfl" secondAttribute="leading" constant="16" id="Q7x-Ad-f0P"/>
+                                            <constraint firstAttribute="bottom" secondItem="0oK-9m-SCL" secondAttribute="bottom" constant="16" id="Qgv-n1-1CS"/>
+                                            <constraint firstItem="0oK-9m-SCL" firstAttribute="leading" secondItem="X47-2r-Xfl" secondAttribute="leading" constant="16" id="T4l-EB-RYB"/>
+                                            <constraint firstItem="AS9-Xf-kcD" firstAttribute="leading" secondItem="Y9q-8L-jYt" secondAttribute="trailing" constant="16" id="YqA-cg-vU1"/>
+                                            <constraint firstItem="AS9-Xf-kcD" firstAttribute="top" secondItem="X47-2r-Xfl" secondAttribute="top" constant="16" id="dzh-p0-IEo"/>
+                                            <constraint firstItem="AS9-Xf-kcD" firstAttribute="leading" secondItem="0oK-9m-SCL" secondAttribute="trailing" constant="16" id="uLh-89-BHm"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOV-dc-Aiq">
+                                        <rect key="frame" x="0.0" y="153.33333333333331" width="393" height="77.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Коньяк &quot;Арарат&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tX7-Xc-Twq">
+                                                <rect key="frame" x="16" y="15.999999999999998" width="149" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlW-89-dam">
+                                                <rect key="frame" x="181" y="16.000000000000004" width="196" height="45.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF6-uJ-Gd9">
+                                                        <rect key="frame" x="68" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.5"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tns-40-x1H"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-1L-g7N">
+                                                        <rect key="frame" x="136" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.9"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFD-7a-FhW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywq-fQ-Nbn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="9xQ-Qn-Ob0"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.25"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGe-hc-T8w"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ywq-fQ-Nbn" firstAttribute="width" secondItem="bgv-1L-g7N" secondAttribute="width" id="2NG-Z8-x8j"/>
+                                                    <constraint firstItem="wF6-uJ-Gd9" firstAttribute="top" secondItem="BlW-89-dam" secondAttribute="top" id="2xO-0n-BaJ"/>
+                                                    <constraint firstItem="bgv-1L-g7N" firstAttribute="top" secondItem="BlW-89-dam" secondAttribute="top" id="61y-a0-jQS"/>
+                                                    <constraint firstItem="Ywq-fQ-Nbn" firstAttribute="leading" secondItem="BlW-89-dam" secondAttribute="leading" id="Jgk-Go-amr"/>
+                                                    <constraint firstItem="wF6-uJ-Gd9" firstAttribute="leading" secondItem="Ywq-fQ-Nbn" secondAttribute="trailing" constant="8" id="NDw-9T-DgN"/>
+                                                    <constraint firstItem="bgv-1L-g7N" firstAttribute="leading" secondItem="wF6-uJ-Gd9" secondAttribute="trailing" constant="8" id="iQT-rf-p5q"/>
+                                                    <constraint firstItem="Ywq-fQ-Nbn" firstAttribute="width" secondItem="wF6-uJ-Gd9" secondAttribute="width" id="kn8-UL-yVO"/>
+                                                    <constraint firstItem="Ywq-fQ-Nbn" firstAttribute="top" secondItem="BlW-89-dam" secondAttribute="top" id="nKr-vd-jzl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bgv-1L-g7N" secondAttribute="trailing" id="nyZ-61-OyW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ywq-fQ-Nbn" secondAttribute="bottom" id="pvV-8p-fKG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bgv-1L-g7N" secondAttribute="bottom" id="qCh-0K-vM4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wF6-uJ-Gd9" secondAttribute="bottom" id="qlD-Fz-IS1"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остаток: 0.33 л." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciZ-Aa-Mon">
+                                                <rect key="frame" x="16" y="44.333333333333371" width="149" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tX7-Xc-Twq" firstAttribute="top" secondItem="EOV-dc-Aiq" secondAttribute="top" constant="16" id="5As-vP-BRF"/>
+                                            <constraint firstItem="BlW-89-dam" firstAttribute="top" secondItem="EOV-dc-Aiq" secondAttribute="top" constant="16" id="CES-P4-7UR"/>
+                                            <constraint firstItem="BlW-89-dam" firstAttribute="leading" secondItem="ciZ-Aa-Mon" secondAttribute="trailing" constant="16" id="IOm-El-NcS"/>
+                                            <constraint firstItem="ciZ-Aa-Mon" firstAttribute="leading" secondItem="EOV-dc-Aiq" secondAttribute="leading" constant="16" id="NJi-YZ-mgB"/>
+                                            <constraint firstAttribute="bottom" secondItem="BlW-89-dam" secondAttribute="bottom" constant="16" id="NKf-gN-FY1"/>
+                                            <constraint firstAttribute="bottom" secondItem="ciZ-Aa-Mon" secondAttribute="bottom" constant="16" id="Okr-ek-fLr"/>
+                                            <constraint firstItem="BlW-89-dam" firstAttribute="leading" secondItem="tX7-Xc-Twq" secondAttribute="trailing" constant="16" id="PAh-Zi-ThW"/>
+                                            <constraint firstItem="ciZ-Aa-Mon" firstAttribute="top" secondItem="tX7-Xc-Twq" secondAttribute="bottom" constant="8" id="jhj-s8-7LJ"/>
+                                            <constraint firstItem="tX7-Xc-Twq" firstAttribute="leading" secondItem="EOV-dc-Aiq" secondAttribute="leading" constant="16" id="lHN-xM-dNE"/>
+                                            <constraint firstAttribute="trailing" secondItem="BlW-89-dam" secondAttribute="trailing" constant="16" id="nXF-gc-rdw"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-Xb-zP6">
+                                        <rect key="frame" x="0.0" y="230.66666666666671" width="393" height="77.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пиво &quot;Крафт&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEl-rv-u32">
+                                                <rect key="frame" x="16" y="15.999999999999998" width="149" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBX-iI-QMn">
+                                                <rect key="frame" x="181" y="16.000000000000004" width="196" height="45.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Q-sU-UJa">
+                                                        <rect key="frame" x="68" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.5"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2g-tE-m2e"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKS-Vs-zNj">
+                                                        <rect key="frame" x="136" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.9"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2R-n5-vPf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYx-BY-cQN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="OpE-1Q-efd"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.25"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wsp-7y-8kW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="gKS-Vs-zNj" secondAttribute="bottom" id="1mN-qe-d8W"/>
+                                                    <constraint firstItem="oYx-BY-cQN" firstAttribute="top" secondItem="iBX-iI-QMn" secondAttribute="top" id="29W-ki-ArJ"/>
+                                                    <constraint firstItem="oYx-BY-cQN" firstAttribute="leading" secondItem="iBX-iI-QMn" secondAttribute="leading" id="5nX-xe-LdP"/>
+                                                    <constraint firstItem="Y6Q-sU-UJa" firstAttribute="leading" secondItem="oYx-BY-cQN" secondAttribute="trailing" constant="8" id="Bgp-Bb-N9W"/>
+                                                    <constraint firstItem="gKS-Vs-zNj" firstAttribute="leading" secondItem="Y6Q-sU-UJa" secondAttribute="trailing" constant="8" id="DpY-G6-u63"/>
+                                                    <constraint firstItem="Y6Q-sU-UJa" firstAttribute="top" secondItem="iBX-iI-QMn" secondAttribute="top" id="Gbv-v3-ayh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gKS-Vs-zNj" secondAttribute="trailing" id="PMf-Ko-IFT"/>
+                                                    <constraint firstItem="oYx-BY-cQN" firstAttribute="width" secondItem="gKS-Vs-zNj" secondAttribute="width" id="ekE-ba-cFA"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Y6Q-sU-UJa" secondAttribute="bottom" id="gbF-Pz-049"/>
+                                                    <constraint firstItem="oYx-BY-cQN" firstAttribute="width" secondItem="Y6Q-sU-UJa" secondAttribute="width" id="j5a-ML-Oxx"/>
+                                                    <constraint firstAttribute="bottom" secondItem="oYx-BY-cQN" secondAttribute="bottom" id="jdd-Qg-N6M"/>
+                                                    <constraint firstItem="gKS-Vs-zNj" firstAttribute="top" secondItem="iBX-iI-QMn" secondAttribute="top" id="pPS-S3-LTv"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остаток: 0.33 л." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBj-7p-f6K">
+                                                <rect key="frame" x="16" y="44.333333333333314" width="149" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yBj-7p-f6K" firstAttribute="top" secondItem="JEl-rv-u32" secondAttribute="bottom" constant="8" id="FqB-dJ-mKU"/>
+                                            <constraint firstItem="JEl-rv-u32" firstAttribute="leading" secondItem="Sli-Xb-zP6" secondAttribute="leading" constant="16" id="IhA-MD-NSW"/>
+                                            <constraint firstItem="iBX-iI-QMn" firstAttribute="top" secondItem="Sli-Xb-zP6" secondAttribute="top" constant="16" id="K1P-Xi-C8z"/>
+                                            <constraint firstAttribute="trailing" secondItem="iBX-iI-QMn" secondAttribute="trailing" constant="16" id="Kex-CD-o5g"/>
+                                            <constraint firstItem="JEl-rv-u32" firstAttribute="top" secondItem="Sli-Xb-zP6" secondAttribute="top" constant="16" id="aar-YT-iCd"/>
+                                            <constraint firstItem="iBX-iI-QMn" firstAttribute="leading" secondItem="JEl-rv-u32" secondAttribute="trailing" constant="16" id="eYe-qr-UBP"/>
+                                            <constraint firstItem="iBX-iI-QMn" firstAttribute="leading" secondItem="yBj-7p-f6K" secondAttribute="trailing" constant="16" id="fGJ-dN-oMS"/>
+                                            <constraint firstItem="yBj-7p-f6K" firstAttribute="leading" secondItem="Sli-Xb-zP6" secondAttribute="leading" constant="16" id="fR1-cs-qT5"/>
+                                            <constraint firstAttribute="bottom" secondItem="iBX-iI-QMn" secondAttribute="bottom" constant="16" id="q9m-v2-1sX"/>
+                                            <constraint firstAttribute="bottom" secondItem="yBj-7p-f6K" secondAttribute="bottom" constant="16" id="xT0-76-gks"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uqy-jQ-hJ4">
+                                        <rect key="frame" x="0.0" y="308" width="393" height="77.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пиво &quot;Козел&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBg-Tw-g1K">
+                                                <rect key="frame" x="16" y="15.999999999999998" width="149" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3r-dY-I84">
+                                                <rect key="frame" x="181" y="16.000000000000004" width="196" height="45.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbW-So-3gr">
+                                                        <rect key="frame" x="68" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.5"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R5h-X0-Gth"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRO-hK-TyA">
+                                                        <rect key="frame" x="136" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.9"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1XP-5U-Xin"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFl-xK-ldi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="45.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="ol4-B4-QHm"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="0.25"/>
+                                                        <connections>
+                                                            <action selector="buyAlcohol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L4j-Hw-e3Q"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="jRO-hK-TyA" secondAttribute="trailing" id="1RO-sD-0zs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="KbW-So-3gr" secondAttribute="bottom" id="Chd-Sk-9KP"/>
+                                                    <constraint firstItem="gFl-xK-ldi" firstAttribute="top" secondItem="i3r-dY-I84" secondAttribute="top" id="Jl7-T7-0HI"/>
+                                                    <constraint firstItem="jRO-hK-TyA" firstAttribute="leading" secondItem="KbW-So-3gr" secondAttribute="trailing" constant="8" id="RnF-lW-dgt"/>
+                                                    <constraint firstItem="KbW-So-3gr" firstAttribute="top" secondItem="i3r-dY-I84" secondAttribute="top" id="VC0-Yh-LgL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gFl-xK-ldi" secondAttribute="bottom" id="VF6-ke-Fqo"/>
+                                                    <constraint firstItem="KbW-So-3gr" firstAttribute="leading" secondItem="gFl-xK-ldi" secondAttribute="trailing" constant="8" id="bTW-wm-yT7"/>
+                                                    <constraint firstItem="gFl-xK-ldi" firstAttribute="width" secondItem="jRO-hK-TyA" secondAttribute="width" id="cjt-7t-puz"/>
+                                                    <constraint firstItem="gFl-xK-ldi" firstAttribute="width" secondItem="KbW-So-3gr" secondAttribute="width" id="d5D-vv-bRV"/>
+                                                    <constraint firstItem="gFl-xK-ldi" firstAttribute="leading" secondItem="i3r-dY-I84" secondAttribute="leading" id="mHW-ep-Dac"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jRO-hK-TyA" secondAttribute="bottom" id="q99-7d-dbm"/>
+                                                    <constraint firstItem="jRO-hK-TyA" firstAttribute="top" secondItem="i3r-dY-I84" secondAttribute="top" id="yYH-Wz-cnn"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остаток: 0.33 л." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Php-oP-9jx">
+                                                <rect key="frame" x="16" y="44.333333333333314" width="149" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="i3r-dY-I84" firstAttribute="top" secondItem="Uqy-jQ-hJ4" secondAttribute="top" constant="16" id="58W-67-YdR"/>
+                                            <constraint firstItem="Php-oP-9jx" firstAttribute="leading" secondItem="Uqy-jQ-hJ4" secondAttribute="leading" constant="16" id="9Sj-4s-xLa"/>
+                                            <constraint firstItem="zBg-Tw-g1K" firstAttribute="top" secondItem="Uqy-jQ-hJ4" secondAttribute="top" constant="16" id="Ifn-Bs-p3e"/>
+                                            <constraint firstAttribute="trailing" secondItem="i3r-dY-I84" secondAttribute="trailing" constant="16" id="KHJ-kb-Syl"/>
+                                            <constraint firstAttribute="bottom" secondItem="Php-oP-9jx" secondAttribute="bottom" constant="16" id="Oj4-TC-BZ8"/>
+                                            <constraint firstItem="zBg-Tw-g1K" firstAttribute="leading" secondItem="Uqy-jQ-hJ4" secondAttribute="leading" constant="16" id="Q10-Yd-Ptr"/>
+                                            <constraint firstItem="i3r-dY-I84" firstAttribute="leading" secondItem="zBg-Tw-g1K" secondAttribute="trailing" constant="16" id="TRz-1g-lxZ"/>
+                                            <constraint firstItem="Php-oP-9jx" firstAttribute="top" secondItem="zBg-Tw-g1K" secondAttribute="bottom" constant="8" id="dwV-Y0-9BC"/>
+                                            <constraint firstAttribute="bottom" secondItem="i3r-dY-I84" secondAttribute="bottom" constant="16" id="fuz-RL-MTa"/>
+                                            <constraint firstItem="i3r-dY-I84" firstAttribute="leading" secondItem="Php-oP-9jx" secondAttribute="trailing" constant="16" id="yaE-Eh-G7u"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Алкоголь к покупке: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSB-p2-Yu3">
+                                <rect key="frame" x="16" y="528.33333333333337" width="361" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xGK-So-evQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0ET-9v-lOT"/>
+                            <constraint firstItem="mSB-p2-Yu3" firstAttribute="top" secondItem="8Vh-gP-B3g" secondAttribute="bottom" constant="16" id="58I-xc-9F5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mSB-p2-Yu3" secondAttribute="trailing" constant="16" id="6rG-8Q-b0u"/>
+                            <constraint firstItem="mSB-p2-Yu3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9cc-WM-AEf"/>
+                            <constraint firstItem="xGK-So-evQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AeW-jR-IPX"/>
+                            <constraint firstItem="8Vh-gP-B3g" firstAttribute="top" secondItem="QYw-qQ-4GF" secondAttribute="bottom" constant="16" id="Cf6-9Z-ACd"/>
+                            <constraint firstItem="8Vh-gP-B3g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GEu-2m-Udc"/>
+                            <constraint firstItem="QYw-qQ-4GF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="OXO-cx-0kp"/>
+                            <constraint firstItem="xGK-So-evQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kX0-Ld-rKt"/>
+                            <constraint firstItem="QYw-qQ-4GF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n2W-IZ-ZwR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Vh-gP-B3g" secondAttribute="trailing" id="w9v-HD-2B2"/>
+                            <constraint firstItem="xGK-So-evQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="631" id="yMb-SY-UeN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alcoholList" destination="mSB-p2-Yu3" id="Wgd-YG-3wb"/>
+                        <outlet property="changeButton" destination="fmI-M6-qP6" id="Avp-d9-hNx"/>
+                        <outlet property="nameOfBar" destination="QYw-qQ-4GF" id="RAz-m6-uRK"/>
+                        <outletCollection property="alcoholButtons" destination="eRY-Bw-AJY" collectionClass="NSMutableArray" id="rLh-UK-eAj"/>
+                        <outletCollection property="alcoholButtons" destination="PR1-qN-Q7s" collectionClass="NSMutableArray" id="j0W-t6-8Kc"/>
+                        <outletCollection property="alcoholButtons" destination="ObX-kX-uRZ" collectionClass="NSMutableArray" id="U33-h1-sFK"/>
+                        <outletCollection property="alcoholButtons" destination="Ozv-SR-pqW" collectionClass="NSMutableArray" id="UEg-7X-0CB"/>
+                        <outletCollection property="alcoholButtons" destination="9ly-DC-TrM" collectionClass="NSMutableArray" id="Q8B-9a-NtG"/>
+                        <outletCollection property="alcoholButtons" destination="xFh-NO-6xe" collectionClass="NSMutableArray" id="GWH-D7-svu"/>
+                        <outletCollection property="alcoholButtons" destination="Ywq-fQ-Nbn" collectionClass="NSMutableArray" id="5Y8-Qi-fmd"/>
+                        <outletCollection property="alcoholButtons" destination="wF6-uJ-Gd9" collectionClass="NSMutableArray" id="Nkh-5h-FbR"/>
+                        <outletCollection property="alcoholButtons" destination="bgv-1L-g7N" collectionClass="NSMutableArray" id="Wha-lS-u93"/>
+                        <outletCollection property="alcoholButtons" destination="oYx-BY-cQN" collectionClass="NSMutableArray" id="pyQ-Bz-VYh"/>
+                        <outletCollection property="alcoholButtons" destination="Y6Q-sU-UJa" collectionClass="NSMutableArray" id="2ZL-Ir-WD5"/>
+                        <outletCollection property="alcoholButtons" destination="gKS-Vs-zNj" collectionClass="NSMutableArray" id="cJA-fr-an4"/>
+                        <outletCollection property="alcoholButtons" destination="gFl-xK-ldi" collectionClass="NSMutableArray" id="CoF-rn-5sr"/>
+                        <outletCollection property="alcoholButtons" destination="KbW-So-3gr" collectionClass="NSMutableArray" id="wnc-Qv-cmB"/>
+                        <outletCollection property="alcoholButtons" destination="jRO-hK-TyA" collectionClass="NSMutableArray" id="uCU-XK-dd6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
