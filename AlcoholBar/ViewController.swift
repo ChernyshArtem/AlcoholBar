@@ -48,18 +48,19 @@ class ViewController: UIViewController {
         print("row:\(row) column:\(column)")
         switch row{
         case 0:
-            alcoholList.text = "\(alcoholList.text!) Пиво Алiварыя \(value)"
+            alcoholList.text = "\(alcoholList.text!)Пиво Алiварыя \(value)"
         case 1:
-            alcoholList.text = "\(alcoholList.text!) Водка Столица \(value)"
+            alcoholList.text = "\(alcoholList.text!)Водка Столица \(value)"
         case 2:
-            alcoholList.text = "\(alcoholList.text!) Коньяк Арарат \(value)"
+            alcoholList.text = "\(alcoholList.text!)Коньяк Арарат \(value)"
         case 3:
-            alcoholList.text = "\(alcoholList.text!) Пиво Крафт \(value)"
+            alcoholList.text = "\(alcoholList.text!)Пиво Крафт \(value)"
         case 4:
-            alcoholList.text = "\(alcoholList.text!) Пиво Козел \(value)"
+            alcoholList.text = "\(alcoholList.text!)Пиво Козел \(value)"
         default:
-            alcoholList.text = "\(alcoholList.text!) Муденье \(value)"
+            alcoholList.text = "\(alcoholList.text!)Муденье \(value)"
         }
+        alcoholList.text = "\(alcoholList.text!) л.\n"
     }
     
 }
